@@ -1,8 +1,14 @@
+import { FC } from 'react'
 import Head from 'next/head'
 import Navbar from '../components/Navbar'
 import styles from './Layout.module.css'
 
-const MainLayout = ({children, page}) => {
+type PropsComponent = {
+    children: React.ReactNode,
+    page: React.ReactNode
+}
+
+const MainLayout: FC <PropsComponent> = ({children, page}) => {
     return (
         <div className={styles.container}>
             <Head>
